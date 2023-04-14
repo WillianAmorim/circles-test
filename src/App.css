@@ -5,11 +5,13 @@
 }
 
 nav {
-  height: 50px;
+  height: 100px;
   background-color: cadetblue;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 h1 {
