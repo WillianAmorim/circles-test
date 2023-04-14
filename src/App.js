@@ -15,14 +15,19 @@ function App() {
   const createCircles = (event) => {
     const section = document.querySelector('section')
     const novoElemento = document.createElement("div");
-    novoElemento.style.position = "absolute";
-    
-    novoElemento.style.left = event.clientX + "px";
-    novoElemento.style.top = event.clientY + "px";
-    novoElemento.style.width = '50px'
-    novoElemento.style.height = '50px'
-    novoElemento.style.backgroundColor = 'black'
-    novoElemento.style.borderRadius = '25px'
+
+    const style = {
+      position: "absolute",
+      left: `${event.clientX}px`,
+      top: `${event.clientY}px`,
+      width: "20px",
+      height: "20px",
+      backgroundColor: "black",
+      borderRadius: "10px",
+    };
+
+    Object.assign(novoElemento.style, style);
+
     section.appendChild(novoElemento);
 
     setCircles(prevCircles => [...prevCircles, novoElemento]);
