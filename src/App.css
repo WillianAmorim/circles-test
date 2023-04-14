@@ -17,3 +17,12 @@ nav {
 h1 {
   color: white;
 }
+
+button {
+  background-color: coral;
+  height: 30px;
+  padding: 5px;
+  color: white;
+  border: 1px solid coral;
+  border-radius: 10px;
+}
