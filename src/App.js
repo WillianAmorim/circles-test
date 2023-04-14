@@ -58,8 +58,8 @@ function App() {
 
   const handleClick = (event) => {
     const actions = {
-      'nav': () => alert('Por favor, clicar no quadro branco !'),
-      'h1': () => alert('Por favor, clicar no quadro branco !'),
+      '#nav': () => alert('Por favor, clicar no quadro branco !'),
+      '#h1': () => alert('Por favor, clicar no quadro branco !'),
       '#button-undo': undoCircles,
       '#button-remake': remakeCircles,
       '#button-clear': clearCircles,
@@ -74,8 +74,8 @@ function App() {
 
   return (
     <div>
-      <nav>
-        <h1>Clique em qualquer lugar para adicionar um novo elemento</h1>
+      <nav id='#nav'>
+        <h1 id='#h1'>Clique em qualquer lugar para adicionar um novo elemento</h1>
         <div id='buttons'>
           <button id='button-undo' onClick={undoCircles}>Desfazer</button>
           <button id='button-remake' onClick={remakeCircles}>Refazer</button>
