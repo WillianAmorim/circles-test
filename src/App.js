@@ -57,27 +57,18 @@ function App() {
   }
 
   const handleClick = (event) => {
-    const nav = document.querySelector('nav')
-    const buttonUndo = document.querySelector('#button-undo')
-    const buttonRemake = document.querySelector('#button-remake')
-    const buttonClear = document.querySelector('#button-clear')
-    const h1 = document.querySelector('h1')
-
-    if((event.target === nav) || (event.target === h1)) {
-      alert('Por favor, clicar no quadro branco !')
-
-    } else if (event.target === buttonUndo){
-      undoCircles()
-
-    } else if (event.target === buttonRemake){
-      remakeCircles()
-
-    } else if (event.target === buttonClear) {
-      clearCircles()
-
-    } else {
-      createCircles(event)
+    const actions = {
+      'nav': () => alert('Por favor, clicar no quadro branco !'),
+      'h1': () => alert('Por favor, clicar no quadro branco !'),
+      '#button-undo': undoCircles,
+      '#button-remake': remakeCircles,
+      '#button-clear': clearCircles,
+      'default': () => createCircles(event)
     }
+  
+    const target = event.target.closest('nav, h1, #button-undo, #button-remake, #button-clear');
+  
+    actions[target?.id || 'default']?.();
   }
 
 
@@ -85,7 +76,7 @@ function App() {
     <div>
       <nav>
         <h1>Clique em qualquer lugar para adicionar um novo elemento</h1>
-        <div>
+        <div id='buttons'>
           <button id='button-undo' onClick={undoCircles}>Desfazer</button>
           <button id='button-remake' onClick={remakeCircles}>Refazer</button>
           <button id='button-clear' onClick={clearCircles}>Limpar</button>
