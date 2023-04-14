@@ -18,6 +18,11 @@ h1 {
   color: white;
 }
 
+#buttons {
+  display: flex;
+  gap: 10px;
+}
+
 button {
   background-color: coral;
   height: 30px;
