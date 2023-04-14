@@ -12,6 +12,12 @@ function App() {
     };
   });
 
+  const clearCircles = () => {
+    const section = document.querySelector('section');
+    section.innerHTML = '';
+    setCircles([])
+  }
+
   const createCircles = (event) => {
     const section = document.querySelector('section')
     const novoElemento = document.createElement("div");
