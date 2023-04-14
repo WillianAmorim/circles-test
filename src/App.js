@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 
 function App() {
 
+  //UseEffect executa handleclick cada vez que um clique é feito
   useEffect(() => {
     document.addEventListener("click", handleClick);
     return () => {
