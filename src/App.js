@@ -1,6 +1,20 @@
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  });
+
+  const handleClick = (event) => {
+    
+  }
+
+
   return (
     <div>
       <nav>
