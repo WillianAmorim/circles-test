@@ -40,7 +40,16 @@ function App() {
   }
 
   const handleClick = (event) => {
-    createCircles(event)
+    const nav = document.querySelector('nav')
+    const buttonClear = document.querySelector('#button-clear')
+
+    if(event.target === nav) {
+      alert('Por favor, clicar no quadro branco !')
+    } else if (event.target === buttonClear){
+      clearCircles()
+    } else {
+      createCircles(event)
+    }
   }
 
 
