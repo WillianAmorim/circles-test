@@ -42,6 +42,9 @@ function App() {
     <div>
       <nav>
         <h1>Clique em qualquer lugar para adicionar um novo elemento</h1>
+        <div>
+          <button id='button-clear' onClick={clearCircles}>Desfazer</button>
+        </div>
       </nav>
       <section></section>
     </div>
